@@ -12,14 +12,26 @@
     @include heading-font;
   }
   .navbar-brand {
+    span.navbar-subbrand {
+      color: white;
+      font-weight: 700;
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        color: darken(white, 15%);
+      }
+    }
     color: $primary;
-    @include script-font;
+    @include brand-font;
+    font-weight: 900;
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: darken($primary, 15%);
     }
+
   }
   .navbar-nav {
     .nav-item {

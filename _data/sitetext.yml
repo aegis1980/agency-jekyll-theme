@@ -11,24 +11,24 @@
 # -----------------
 en: &DEFAULT_EN
   header:
-    title: Welcome to our Studio!
-    text: It's Nice To Meet You
-    button: Tell Me More
+    button: "Tell me more" 
     buttonlink: "#services"
 
   services:
     title: "Services"
-    text: "Lorem ipsum"
+    text: "Techos is an engineering firm specialising in the design of facade systems. Your building's facade provides the shelter and ional analysis services. We specialise in the design, engineering & analysis of bespoke systems"
     section: services
     list:
-      - title: "E-Commerce"
+      - title: "Facade engineering"
+        id: "fac_eng"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
+        img: "assets/img/services/ep1.jpg"
+        #icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
+      - title: "Performance analysis"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Your description here, full **Markdown** support"
+      - title: ""
+        desc: "We specialise in providing assisitance where other design firms "
         icon: fab fa-markdown
 
   portfolio:

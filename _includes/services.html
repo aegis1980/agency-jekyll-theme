@@ -13,17 +13,31 @@
 	  
       <div class="row text-center">
 	  {% for service in site.data.sitetext[site.locale].services.list %}
-        <div class="col-md-4">
+        <div class="col-md-4 services-item">
+          {% if service.icon %}
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">{{ service.title | markdownify }}</h4>
-          {% if service.desc %}<div class="text-muted">{{ service.desc | markdownify }}</div>{% endif %}
+          {% elsif service.img %}
+          <a class="services-link" data-toggle="modal" href="#smodal_{{ service.id }}">
+            <div class="services-hover">
+              <div class="services-hover-content">
+                <i class="{{ site.data.style.portfolio-icon | default: "fas fa-plus fa-3x" }}"></i>
+              </div>
+            </div>
+            <div class="services-image">
+              <img src="{{ service.img }}" class="rounded-circle img-fluid" alt="">
+            </div>
+          </a>
+          {% endif %}
+          <h4 class="services-heading">{{ service.title | markdownify }}</h4>
+          {% if service.desc %}<div class="text-muted text-left">{{ service.desc | markdownify }}</div>{% endif %}
         </div>
 	  {% endfor %}
       </div>
 	  
     </div>
   </section>
+  {% include services_modals.html %}
 <!-- End Services -->
